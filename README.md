@@ -10,7 +10,7 @@ Dillinger uses a number of open source projects to work properly:
 * [Webpack] - the streaming build system
 
 ### Installation
-Install the dependencies and devDependencies and start the server.
+Install the dependencies and devDependencies and start the app.
 
 ```sh
 $ npm install
@@ -23,7 +23,7 @@ For production environments...
 $ npm run build
 ```
 
-Verify the deployment by navigating to your server address in your preferred browser.
+Verify the deployment by navigating to your app address in your preferred browser.
 
 ```sh
 127.0.0.1:9009

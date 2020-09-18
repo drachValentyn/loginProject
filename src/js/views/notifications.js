@@ -4,7 +4,7 @@ function getContainer() {
 
 function notifyContainerTemplate() {
   return `
-  <div class="notify-container" style="position: fixed; top: 10px; right: 10px; z-index: 99;"></div>
+  <div class="notify-container" style="position: fixed; top: 10px; left: 10px; z-index: 99;"></div>
   `;
 }
 
