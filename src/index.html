@@ -9,38 +9,159 @@
   <body>
     <div class="login-page-wrapp d-flex">
       <div class="login-form-wrap d-flex align-items-center">
-        <div class="form-card card ml-auto">
-          <div class="card-body">
-            
-            <h4 class="card-title">Please Login</h4>
+        <div class="tabs">
+          <div class="tabs__header">
+            <div class="tabs__heading is-active" data-tab-index="tab-1">
+              Login
+            </div>
+            <div class="tabs__heading" data-tab-index="tab-2">Register</div>
+          </div>
 
-            <form name="loginForm">
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  data-required="email"
-                  data-invalid-message="Please provide valid email example@example.com"
-                />
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Password"
-                  data-required="password"
-                  data-invalid-message="Please enter password at least 4 symbols"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+          <div class="tabs__body">
+            <div class="tabs__content tab-1 is-active">
+              <div class="form-card card ml-auto">
+                <div class="card-body">
+                  <h4 class="card-title">Login</h4>
 
+                  <form name="loginForm">
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                        data-required="email"
+                        data-invalid-message="Please provide valid email example@example.com"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Password"
+                        data-required="password"
+                        data-invalid-message="Please enter password at least 4 symbols"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="tabs__content tab-2">
+              <div class="form-card form-register card ml-auto">
+                <div class="card-body">
+                  <h4 class="card-title">Registration</h4>
+
+                  <form name="registerForm">
+
+                    <div class="form-group">
+                      <label for="reg-email">Email address</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="reg-email"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                        data-required="email"
+                        data-invalid-message="Please provide valid email example@example.com"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="reg-password">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="reg-password"
+                        placeholder="Password"
+                        data-required="password"
+                        data-invalid-message="Please enter password at least 4 symbols"
+                      />
+                    </div>
+
+
+<!--  -->
+
+                    <div class="form-group">
+                      <label for="first_name">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="first_name"
+                        placeholder="First Name"
+                        data-required="first_name"
+                        data-invalid-message="Please enter your first name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="last_name">Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="last_name"
+                        placeholder="Last Name"
+                        data-required="last_name"
+                        data-invalid-message="Please enter your last name"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Phone number"
+                        data-required="phone"
+                        data-invalid-message="Please enter your phone number"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="gender_orientation">Gender</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="gender_orientation"
+                        placeholder="Gender"
+                        data-required="gender_orientation"
+                        data-invalid-message="Your gender"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="gender_orientation">Birthday</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="gender_orientation"
+                        placeholder="Gender"
+                        data-required="gender_orientation"
+                        data-invalid-message="Your gender"
+                      />
+                    </div>
+
+                    
+
+
+
+
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

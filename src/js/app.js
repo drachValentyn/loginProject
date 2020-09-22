@@ -7,6 +7,7 @@ import { showInputError, removeInputError } from './views/form';
 import { login } from './services/auth.service';
 import { notify } from './views/notifications';
 import { getNews } from './services/news.service';
+import { tabs } from './views/tabs'
 
 const { form, inputEmail, inputPassword } = UI;
 const inputs = [inputEmail, inputPassword];
@@ -20,6 +21,8 @@ form.addEventListener('submit', (e) => {
 inputs.forEach((el) => {
   el.addEventListener('focus', () => removeInputError(el));
 });
+
+tabs();
 
 // Handlers
 async function onSubmit() {

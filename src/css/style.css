@@ -4,12 +4,15 @@
 
 .login-form-wrap {
   width: 50%;
+  justify-content: center;
 }
 
 .login-form-wrap .form-card {
   max-width: 500px;
   width: 100%;
   margin-right: 30px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .login-form-wrap .form-card .card-title {
@@ -37,4 +40,49 @@
 
 .login-greeting-screen .login-greeting-screen-description {
   line-height: 1.4;
+}
+
+.tabs {
+  width: 100%;
+  max-width: 450px;
+  padding: 0 15px;
+}
+
+.tabs__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs__heading {
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: white;
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom: none;
+  position: relative;
+  bottom: -1px;
+  transition: 0.3s all ease-in;
+}
+
+.tabs__heading:hover {
+  text-decoration: underline;
+}
+
+.tabs__heading.is-active {
+  z-index: 1;
+}
+
+.tabs__content {
+  display: none;
+}
+
+.tabs__content.is-active {
+  display: block;
 }
