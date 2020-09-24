@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Login Form</title>
   </head>
   <body>
     <div class="login-page-wrapp d-flex">
@@ -25,7 +25,6 @@
 
                   <form name="loginForm">
                     <div class="form-group">
-                      <label for="email">Email address</label>
                       <input
                         type="email"
                         class="form-control"
@@ -37,7 +36,6 @@
                       />
                     </div>
                     <div class="form-group">
-                      <label for="password">Password</label>
                       <input
                         type="password"
                         class="form-control"
@@ -62,8 +60,8 @@
 
                   <form name="registerForm">
 
+                    
                     <div class="form-group">
-                      <label for="reg-email">Email address</label>
                       <input
                         type="email"
                         class="form-control"
@@ -76,7 +74,6 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="reg-password">Password</label>
                       <input
                         type="password"
                         class="form-control"
@@ -88,10 +85,18 @@
                     </div>
 
 
-<!--  -->
-
                     <div class="form-group">
-                      <label for="first_name">First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nickname"
+                        placeholder="Nickname"
+                        data-required="nickname"
+                        data-invalid-message="Please enter your nickname"
+                      />
+                    </div>
+                    
+                    <div class="form-group">
                       <input
                         type="text"
                         class="form-control"
@@ -103,7 +108,6 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="last_name">Last Name</label>
                       <input
                         type="text"
                         class="form-control"
@@ -115,7 +119,6 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="phone">Phone</label>
                       <input
                         type="number"
                         class="form-control"
@@ -127,33 +130,46 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="gender_orientation">Gender</label>
+                      <div class="input-field">
+                        <select name="Gender" id="gender_orientation">
+                          <option value="male" selected>Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
                       <input
-                        type="number"
-                        class="form-control"
-                        id="gender_orientation"
-                        placeholder="Gender"
-                        data-required="gender_orientation"
-                        data-invalid-message="Your gender"
+                        type="text"
+                        class="form-control datepicker"
+                        id="birth_day"
+                        placeholder="Birthday"
+                        data-required="birth_day"
+                        data-invalid-message="Your date of birthday"
                       />
                     </div>
 
                     <div class="form-group">
-                      <label for="gender_orientation">Birthday</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="gender_orientation"
-                        placeholder="Gender"
-                        data-required="gender_orientation"
-                        data-invalid-message="Your gender"
-                      />
+                      <div class="input-field">
+                        <input
+                          type="text"
+                          id="autocomplete-country"
+                          class="autocomplete form-control"
+                          placeholder="Country"
+                        />
+                      </div>
                     </div>
 
-                    
-
-
-
+                    <div class="form-group">
+                      <div class="input-field">
+                        <input
+                          type="text"
+                          id="autocomplete-city"
+                          class="autocomplete form-control"
+                          placeholder="City"
+                        />
+                      </div>
+                    </div>
 
                     <button type="submit" class="btn btn-primary">
                       Submit

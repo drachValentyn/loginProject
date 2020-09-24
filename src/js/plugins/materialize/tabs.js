@@ -4,7 +4,7 @@
  * 
  */
 
-export function tabs() {
+export default (function() {
   document.querySelectorAll(".tabs").forEach((tab) => {
   const tabHeading = tab.querySelectorAll(".tabs__heading");
   const tabContent = tab.querySelectorAll(".tabs__content");
@@ -28,4 +28,4 @@ export function tabs() {
     });
   });
 });
-}
+})()

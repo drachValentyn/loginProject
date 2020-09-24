@@ -13,6 +13,7 @@
   margin-right: 30px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  box-shadow: none;
 }
 
 .login-form-wrap .form-card .card-title {
@@ -42,8 +43,9 @@
   line-height: 1.4;
 }
 
-.tabs {
+.login-form-wrap .tabs {
   width: 100%;
+  height: auto;
   max-width: 450px;
   padding: 0 15px;
 }
@@ -67,8 +69,12 @@
   border-top-right-radius: 0.25rem;
   border-bottom: none;
   position: relative;
-  bottom: -1px;
+  bottom: -8px;
   transition: 0.3s all ease-in;
+}
+
+.datepicker-modal{
+  height: auto;
 }
 
 .tabs__heading:hover {
@@ -85,4 +91,8 @@
 
 .tabs__content.is-active {
   display: block;
+}
+
+.select-wrapper input.select-dropdown{
+  color: var(--gray);
 }
