@@ -66,8 +66,9 @@ class RegUI {
   }
 
   setAutocompleteData(data) {
+    // console.log(data);
     this.countryAutocomplete.updateData(data);
-    this.cityAutocomplete.updateData(data);
+    // this.cityAutocomplete.updateData(data);
   }
 }
 

@@ -1,5 +1,5 @@
 .login-page-wrapp {
-  height: 100vh;
+  height: 100%;
 }
 
 .login-form-wrap {
@@ -79,6 +79,10 @@
 
 .tabs__heading:hover {
   text-decoration: underline;
+}
+
+.reg-tabs.is-active{
+  bottom: -9px;
 }
 
 .tabs__heading.is-active {
