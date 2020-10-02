@@ -1,11 +1,16 @@
 import {
-  getAutocompleteInstance,
+  getAutocompleteInstanceCountry,
+  getAutocompleteInstanceCity,
   getDatepickerInstance,
 } from '../plugins/materialize/materialize';
 import { formatDate } from '../helpers/date';
 
 class RegUI {
-  constructor(autocompleteInstance, datepickerInstance) {
+  constructor(
+    autocompleteInstanceCountry,
+    autocompleteInstanceCity,
+    datepickerInstance
+  ) {
     this.regForm = document.forms['registerForm'];
 
     this.regEmail = document.getElementById('reg-email');
@@ -17,10 +22,10 @@ class RegUI {
     this.gender = document.getElementById('gender_orientation');
 
     this.country = document.getElementById('autocomplete-country');
-    this.countryAutocomplete = autocompleteInstance(this.country);
+    this.countryAutocomplete = autocompleteInstanceCountry(this.country);
 
     this.city = document.getElementById('autocomplete-city');
-    this.cityAutocomplete = autocompleteInstance(this.city);
+    this.cityAutocomplete = autocompleteInstanceCity(this.city);
 
     this.birthday = document.getElementById('birth_day');
     this.birthdayDatePicker = datepickerInstance(this.birthday);
@@ -66,12 +71,18 @@ class RegUI {
   }
 
   setAutocompleteData(data) {
-    // console.log(data);
     this.countryAutocomplete.updateData(data);
-    // this.cityAutocomplete.updateData(data);
+  }
+
+  setAutocompleteDataCity(data) {
+    this.cityAutocomplete.updateData(data);
   }
 }
 
-const regUI = new RegUI(getAutocompleteInstance, getDatepickerInstance);
+const regUI = new RegUI(
+  getAutocompleteInstanceCountry,
+  getAutocompleteInstanceCity,
+  getDatepickerInstance
+);
 
 export default regUI;

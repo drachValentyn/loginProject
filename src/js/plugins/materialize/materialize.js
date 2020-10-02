@@ -11,12 +11,19 @@ export function getSelectInstance(elem) {
 
 //Init autocomplete
 const autocompleteCountry = document.getElementById('autocomplete-country');
-M.Autocomplete.init(autocompleteCountry, {data: {}});
+M.Autocomplete.init(autocompleteCountry, {data: {}, onAutocomplete: function() {
+          console.log('txt');
+        },} );
+
+export function getAutocompleteInstanceCountry(elem) {
+  return M.Autocomplete.getInstance(elem);
+}
+
 
 const autocompleteCity = document.getElementById('autocomplete-city');
 M.Autocomplete.init(autocompleteCity, {data: {}});
 
-export function getAutocompleteInstance(elem) {
+export function getAutocompleteInstanceCity(elem) {
   return M.Autocomplete.getInstance(elem);
 }
 

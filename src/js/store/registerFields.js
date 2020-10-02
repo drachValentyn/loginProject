@@ -1,5 +1,5 @@
-import api from "../services/apiService";
-import { formatDate } from "../helpers/date";
+import api from '../services/apiService';
+import { formatDate } from '../helpers/date';
 
 class Locations {
   constructor(helpers) {
@@ -10,26 +10,21 @@ class Locations {
     this.formatDate = helpers.formatDate;
   }
   async init() {
-    const response = await Promise.all([
-      this.api.countries(),
-      // this.api.cities(),
-    ]);
-
-    // console.log(response);
+    const response = await Promise.all([this.api.countries()]);
     const countries = response;
     this.countries = this.serializeCountries(countries);
-
     return response;
   }
 
   getCounrty() {
-    console.log(this.countries);
     return this.countries;
   }
 
   getCity() {
-    this.cities = this.serializeCities(cities);
-    this.shortCities = this.createShortCities(this.cities);
+    const countryName = document.getElementById('autocomplete-country').value;
+    console.log(countryName);
+    // this.cities = this.serializeCities(cities);
+    // this.shortCities = this.createShortCities(this.cities);
   }
 
   getCityCodeByKey(key) {
@@ -51,19 +46,10 @@ class Locations {
   }
 
   serializeCountries(countries) {
-    const obj = countries.reduce((acc, country) => {
-      acc = country;
+    return Object.entries(countries[0]).reduce((acc, [, country]) => {
+      acc[country] = null;
       return acc;
     }, {});
-
-    const keys = Object.values(obj)
-
-    return keys;
-
-    // return countries.reduce((acc, country) => {
-    //   acc = country;
-    //   return acc;
-    // }, {});
   }
 
   serializeCities(cities) {
