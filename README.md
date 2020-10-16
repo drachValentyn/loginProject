@@ -1,6 +1,6 @@
 # Login (training project)
 
-Training project on JS.
+Training project - authorization and login on vanilla JS
 
 ### Tech
 
